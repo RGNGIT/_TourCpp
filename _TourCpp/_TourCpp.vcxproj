@@ -131,6 +131,7 @@
   <ItemGroup>
     <ClInclude Include="client.h" />
     <ClInclude Include="deal.h" />
+    <ClInclude Include="localstorage.h" />
     <ClInclude Include="ticket.h" />
     <ClInclude Include="TourMain.h">
       <FileType>CppForm</FileType>

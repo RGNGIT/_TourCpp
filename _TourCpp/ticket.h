@@ -17,6 +17,6 @@ public:
 	std::string country;
 	std::string city;
 	std::string extraStuff;
-	float price;
-	int amount;
+	std::string price;
+	std::string amount;
 };
