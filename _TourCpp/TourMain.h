@@ -1185,7 +1185,7 @@ private: System::Windows::Forms::Button^ buttonSaveR2;
 						gcnew String((deals[i]->ticket->country + ", " + deals[i]->ticket->city).c_str()),
 						gcnew String(deals[i]->ticket->extraStuff.c_str()),
 						gcnew String(deals[i]->ticket->price.c_str()),
-						gcnew String(deals[i]->sellDate.c_str())
+						gcnew String(deals[i]->sellDate.c_str()) 
 					);
 				}
 			}
