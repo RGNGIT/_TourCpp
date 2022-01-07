@@ -11,7 +11,7 @@ public:
 
 class Ticket {
 public:
-	int num;
+	uint16_t num;
 	std::string sendDate;
 	std::string retDate;
 	std::string country;

@@ -10,6 +10,7 @@ namespace tour {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::IO;
 	using namespace std;
 
 	public ref class TourApp : public System::Windows::Forms::Form
@@ -92,6 +93,59 @@ namespace tour {
 
 
 	private: System::Windows::Forms::Button^ buttonClientAdd;
+	private: System::Windows::Forms::Label^ label21;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePickerSell;
+
+	private: System::Windows::Forms::ComboBox^ comboBox3;
+	private: System::Windows::Forms::Label^ label20;
+	private: System::Windows::Forms::ComboBox^ comboBox2;
+	private: System::Windows::Forms::Label^ label19;
+	private: System::Windows::Forms::ComboBox^ comboBox1;
+	private: System::Windows::Forms::Label^ label18;
+	private: System::Windows::Forms::Button^ buttonSell;
+	private: System::Windows::Forms::TabControl^ tabControl2;
+	private: System::Windows::Forms::TabPage^ tabPage6;
+	private: System::Windows::Forms::TabPage^ tabPage7;
+	private: System::Windows::Forms::TabPage^ tabPage8;
+	private: System::Windows::Forms::Label^ label22;
+	private: System::Windows::Forms::ComboBox^ comboBoxClient;
+	private: System::Windows::Forms::DataGridView^ dataGridViewR1;
+
+	private: System::Windows::Forms::Button^ buttonRClient;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
+private: System::Windows::Forms::Label^ label23;
+private: System::Windows::Forms::ComboBox^ comboBoxREmp;
+private: System::Windows::Forms::DataGridView^ dataGridViewR2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn1;
+private: System::Windows::Forms::Button^ buttonREmp;
+private: System::Windows::Forms::DataGridView^ dataGridViewR3;
+
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn4;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn5;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn6;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn7;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
+private: System::Windows::Forms::Button^ buttonRCity;
+private: System::Windows::Forms::Label^ label24;
+private: System::Windows::Forms::ComboBox^ comboBoxRCity;
+private: System::Windows::Forms::Button^ buttonSaveR3;
+private: System::Windows::Forms::Button^ buttonSaveR1;
+private: System::Windows::Forms::Button^ buttonSaveR2;
+
+
+
+
+
+
+
 
 	private:
 		System::ComponentModel::Container ^components;
@@ -136,7 +190,16 @@ namespace tour {
 			this->textBoxCName = (gcnew System::Windows::Forms::TextBox());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->textBoxCSurname = (gcnew System::Windows::Forms::TextBox());
-			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->buttonSell = (gcnew System::Windows::Forms::Button());
+			this->label21 = (gcnew System::Windows::Forms::Label());
+			this->dateTimePickerSell = (gcnew System::Windows::Forms::DateTimePicker());
+			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->buttonEmpConfirm = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -145,11 +208,54 @@ namespace tour {
 			this->textBoxEName = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBoxESurname = (gcnew System::Windows::Forms::TextBox());
-			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->tabControl2 = (gcnew System::Windows::Forms::TabControl());
+			this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
+			this->dataGridViewR1 = (gcnew System::Windows::Forms::DataGridView());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->buttonRClient = (gcnew System::Windows::Forms::Button());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->comboBoxClient = (gcnew System::Windows::Forms::ComboBox());
+			this->tabPage7 = (gcnew System::Windows::Forms::TabPage());
+			this->buttonREmp = (gcnew System::Windows::Forms::Button());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->comboBoxREmp = (gcnew System::Windows::Forms::ComboBox());
+			this->dataGridViewR2 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->tabPage8 = (gcnew System::Windows::Forms::TabPage());
+			this->buttonRCity = (gcnew System::Windows::Forms::Button());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->comboBoxRCity = (gcnew System::Windows::Forms::ComboBox());
+			this->dataGridViewR3 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridViewTextBoxColumn2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->buttonSaveR3 = (gcnew System::Windows::Forms::Button());
+			this->buttonSaveR2 = (gcnew System::Windows::Forms::Button());
+			this->buttonSaveR1 = (gcnew System::Windows::Forms::Button());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabPage2->SuspendLayout();
+			this->tabPage5->SuspendLayout();
 			this->tabPage4->SuspendLayout();
+			this->tabPage3->SuspendLayout();
+			this->tabControl2->SuspendLayout();
+			this->tabPage6->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewR1))->BeginInit();
+			this->tabPage7->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewR2))->BeginInit();
+			this->tabPage8->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewR3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// tabControl1
@@ -157,13 +263,14 @@ namespace tour {
 			this->tabControl1->Controls->Add(this->tabPage1);
 			this->tabControl1->Controls->Add(this->tabPage2);
 			this->tabControl1->Controls->Add(this->tabPage5);
-			this->tabControl1->Controls->Add(this->tabPage3);
 			this->tabControl1->Controls->Add(this->tabPage4);
+			this->tabControl1->Controls->Add(this->tabPage3);
 			this->tabControl1->Location = System::Drawing::Point(12, 12);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
 			this->tabControl1->Size = System::Drawing::Size(902, 503);
 			this->tabControl1->TabIndex = 0;
+			this->tabControl1->SelectedIndexChanged += gcnew System::EventHandler(this, &TourApp::tabControl1_SelectedIndexChanged);
 			// 
 			// tabPage1
 			// 
@@ -352,9 +459,9 @@ namespace tour {
 			this->label17->AutoSize = true;
 			this->label17->Location = System::Drawing::Point(3, 243);
 			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(308, 13);
+			this->label17->Size = System::Drawing::Size(44, 13);
 			this->label17->TabIndex = 31;
-			this->label17->Text = L"Скидка на новинку. Соси не весь член, а только половинку";
+			this->label17->Text = L"Скидка";
 			// 
 			// textBoxCDis
 			// 
@@ -459,15 +566,104 @@ namespace tour {
 			this->textBoxCSurname->Size = System::Drawing::Size(200, 20);
 			this->textBoxCSurname->TabIndex = 18;
 			// 
-			// tabPage3
+			// tabPage5
 			// 
-			this->tabPage3->Location = System::Drawing::Point(4, 22);
-			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage3->Size = System::Drawing::Size(894, 477);
-			this->tabPage3->TabIndex = 2;
-			this->tabPage3->Text = L"Запрос";
-			this->tabPage3->UseVisualStyleBackColor = true;
+			this->tabPage5->Controls->Add(this->buttonSell);
+			this->tabPage5->Controls->Add(this->label21);
+			this->tabPage5->Controls->Add(this->dateTimePickerSell);
+			this->tabPage5->Controls->Add(this->comboBox3);
+			this->tabPage5->Controls->Add(this->label20);
+			this->tabPage5->Controls->Add(this->comboBox2);
+			this->tabPage5->Controls->Add(this->label19);
+			this->tabPage5->Controls->Add(this->comboBox1);
+			this->tabPage5->Controls->Add(this->label18);
+			this->tabPage5->Location = System::Drawing::Point(4, 22);
+			this->tabPage5->Name = L"tabPage5";
+			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage5->Size = System::Drawing::Size(894, 477);
+			this->tabPage5->TabIndex = 4;
+			this->tabPage5->Text = L"Продажа";
+			this->tabPage5->UseVisualStyleBackColor = true;
+			// 
+			// buttonSell
+			// 
+			this->buttonSell->Location = System::Drawing::Point(728, 448);
+			this->buttonSell->Name = L"buttonSell";
+			this->buttonSell->Size = System::Drawing::Size(160, 23);
+			this->buttonSell->TabIndex = 33;
+			this->buttonSell->Text = L"Добавить";
+			this->buttonSell->UseVisualStyleBackColor = true;
+			this->buttonSell->Click += gcnew System::EventHandler(this, &TourApp::buttonSell_Click);
+			// 
+			// label21
+			// 
+			this->label21->AutoSize = true;
+			this->label21->Location = System::Drawing::Point(6, 127);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(80, 13);
+			this->label21->TabIndex = 7;
+			this->label21->Text = L"Дата продажи";
+			// 
+			// dateTimePickerSell
+			// 
+			this->dateTimePickerSell->Location = System::Drawing::Point(9, 143);
+			this->dateTimePickerSell->Name = L"dateTimePickerSell";
+			this->dateTimePickerSell->Size = System::Drawing::Size(309, 20);
+			this->dateTimePickerSell->TabIndex = 6;
+			// 
+			// comboBox3
+			// 
+			this->comboBox3->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Location = System::Drawing::Point(9, 103);
+			this->comboBox3->Name = L"comboBox3";
+			this->comboBox3->Size = System::Drawing::Size(309, 21);
+			this->comboBox3->TabIndex = 5;
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Location = System::Drawing::Point(6, 87);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(49, 13);
+			this->label20->TabIndex = 4;
+			this->label20->Text = L"Путевка";
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Location = System::Drawing::Point(9, 62);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(309, 21);
+			this->comboBox2->TabIndex = 3;
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Location = System::Drawing::Point(6, 46);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(43, 13);
+			this->label19->TabIndex = 2;
+			this->label19->Text = L"Клиент";
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Location = System::Drawing::Point(9, 23);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(309, 21);
+			this->comboBox1->TabIndex = 1;
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(6, 7);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(60, 13);
+			this->label18->TabIndex = 0;
+			this->label18->Text = L"Сотрудник";
 			// 
 			// tabPage4
 			// 
@@ -483,7 +679,7 @@ namespace tour {
 			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage4->Size = System::Drawing::Size(894, 477);
 			this->tabPage4->TabIndex = 3;
-			this->tabPage4->Text = L"Текущий сотрудник";
+			this->tabPage4->Text = L"Сотрудник";
 			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
 			// buttonEmpConfirm
@@ -492,7 +688,7 @@ namespace tour {
 			this->buttonEmpConfirm->Name = L"buttonEmpConfirm";
 			this->buttonEmpConfirm->Size = System::Drawing::Size(160, 23);
 			this->buttonEmpConfirm->TabIndex = 8;
-			this->buttonEmpConfirm->Text = L"Применить";
+			this->buttonEmpConfirm->Text = L"Добавить";
 			this->buttonEmpConfirm->UseVisualStyleBackColor = true;
 			this->buttonEmpConfirm->Click += gcnew System::EventHandler(this, &TourApp::buttonEmpConfirm_Click);
 			// 
@@ -544,15 +740,295 @@ namespace tour {
 			this->textBoxESurname->Size = System::Drawing::Size(155, 20);
 			this->textBoxESurname->TabIndex = 1;
 			// 
-			// tabPage5
+			// tabPage3
 			// 
-			this->tabPage5->Location = System::Drawing::Point(4, 22);
-			this->tabPage5->Name = L"tabPage5";
-			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage5->Size = System::Drawing::Size(894, 477);
-			this->tabPage5->TabIndex = 4;
-			this->tabPage5->Text = L"Продажа";
-			this->tabPage5->UseVisualStyleBackColor = true;
+			this->tabPage3->Controls->Add(this->tabControl2);
+			this->tabPage3->Location = System::Drawing::Point(4, 22);
+			this->tabPage3->Name = L"tabPage3";
+			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage3->Size = System::Drawing::Size(894, 477);
+			this->tabPage3->TabIndex = 2;
+			this->tabPage3->Text = L"Запрос";
+			this->tabPage3->UseVisualStyleBackColor = true;
+			// 
+			// tabControl2
+			// 
+			this->tabControl2->Controls->Add(this->tabPage6);
+			this->tabControl2->Controls->Add(this->tabPage7);
+			this->tabControl2->Controls->Add(this->tabPage8);
+			this->tabControl2->Location = System::Drawing::Point(6, 6);
+			this->tabControl2->Name = L"tabControl2";
+			this->tabControl2->SelectedIndex = 0;
+			this->tabControl2->Size = System::Drawing::Size(882, 465);
+			this->tabControl2->TabIndex = 0;
+			// 
+			// tabPage6
+			// 
+			this->tabPage6->Controls->Add(this->buttonSaveR1);
+			this->tabPage6->Controls->Add(this->dataGridViewR1);
+			this->tabPage6->Controls->Add(this->buttonRClient);
+			this->tabPage6->Controls->Add(this->label22);
+			this->tabPage6->Controls->Add(this->comboBoxClient);
+			this->tabPage6->Location = System::Drawing::Point(4, 22);
+			this->tabPage6->Name = L"tabPage6";
+			this->tabPage6->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage6->Size = System::Drawing::Size(874, 439);
+			this->tabPage6->TabIndex = 0;
+			this->tabPage6->Text = L"Путевка определённого клиента";
+			this->tabPage6->UseVisualStyleBackColor = true;
+			// 
+			// dataGridViewR1
+			// 
+			this->dataGridViewR1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridViewR1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
+				this->Column1,
+					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7
+			});
+			this->dataGridViewR1->Location = System::Drawing::Point(234, 6);
+			this->dataGridViewR1->Name = L"dataGridViewR1";
+			this->dataGridViewR1->Size = System::Drawing::Size(634, 427);
+			this->dataGridViewR1->TabIndex = 7;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Номер";
+			this->Column1->Name = L"Column1";
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"Дата отправления";
+			this->Column2->Name = L"Column2";
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"Дата возврата";
+			this->Column3->Name = L"Column3";
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"Страна, город";
+			this->Column4->Name = L"Column4";
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"Дополнительно";
+			this->Column5->Name = L"Column5";
+			// 
+			// Column6
+			// 
+			this->Column6->HeaderText = L"Цена";
+			this->Column6->Name = L"Column6";
+			// 
+			// Column7
+			// 
+			this->Column7->HeaderText = L"Дата продажи";
+			this->Column7->Name = L"Column7";
+			// 
+			// buttonRClient
+			// 
+			this->buttonRClient->Location = System::Drawing::Point(6, 381);
+			this->buttonRClient->Name = L"buttonRClient";
+			this->buttonRClient->Size = System::Drawing::Size(222, 23);
+			this->buttonRClient->TabIndex = 6;
+			this->buttonRClient->Text = L"Найти";
+			this->buttonRClient->UseVisualStyleBackColor = true;
+			this->buttonRClient->Click += gcnew System::EventHandler(this, &TourApp::buttonRClient_Click);
+			// 
+			// label22
+			// 
+			this->label22->AutoSize = true;
+			this->label22->Location = System::Drawing::Point(3, 3);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(43, 13);
+			this->label22->TabIndex = 5;
+			this->label22->Text = L"Клиент";
+			// 
+			// comboBoxClient
+			// 
+			this->comboBoxClient->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBoxClient->FormattingEnabled = true;
+			this->comboBoxClient->Location = System::Drawing::Point(6, 19);
+			this->comboBoxClient->Name = L"comboBoxClient";
+			this->comboBoxClient->Size = System::Drawing::Size(222, 21);
+			this->comboBoxClient->TabIndex = 4;
+			// 
+			// tabPage7
+			// 
+			this->tabPage7->Controls->Add(this->buttonSaveR2);
+			this->tabPage7->Controls->Add(this->buttonREmp);
+			this->tabPage7->Controls->Add(this->label23);
+			this->tabPage7->Controls->Add(this->comboBoxREmp);
+			this->tabPage7->Controls->Add(this->dataGridViewR2);
+			this->tabPage7->Location = System::Drawing::Point(4, 22);
+			this->tabPage7->Name = L"tabPage7";
+			this->tabPage7->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage7->Size = System::Drawing::Size(874, 439);
+			this->tabPage7->TabIndex = 1;
+			this->tabPage7->Text = L"Список городов, в которые оформлял путевки заданный сотрудник";
+			this->tabPage7->UseVisualStyleBackColor = true;
+			// 
+			// buttonREmp
+			// 
+			this->buttonREmp->Location = System::Drawing::Point(6, 381);
+			this->buttonREmp->Name = L"buttonREmp";
+			this->buttonREmp->Size = System::Drawing::Size(222, 23);
+			this->buttonREmp->TabIndex = 11;
+			this->buttonREmp->Text = L"Найти";
+			this->buttonREmp->UseVisualStyleBackColor = true;
+			this->buttonREmp->Click += gcnew System::EventHandler(this, &TourApp::buttonREmp_Click);
+			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Location = System::Drawing::Point(3, 6);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(60, 13);
+			this->label23->TabIndex = 10;
+			this->label23->Text = L"Сотрудник";
+			// 
+			// comboBoxREmp
+			// 
+			this->comboBoxREmp->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBoxREmp->FormattingEnabled = true;
+			this->comboBoxREmp->Location = System::Drawing::Point(6, 22);
+			this->comboBoxREmp->Name = L"comboBoxREmp";
+			this->comboBoxREmp->Size = System::Drawing::Size(222, 21);
+			this->comboBoxREmp->TabIndex = 9;
+			// 
+			// dataGridViewR2
+			// 
+			this->dataGridViewR2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridViewR2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) { this->dataGridViewTextBoxColumn1 });
+			this->dataGridViewR2->Location = System::Drawing::Point(234, 6);
+			this->dataGridViewR2->Name = L"dataGridViewR2";
+			this->dataGridViewR2->Size = System::Drawing::Size(634, 427);
+			this->dataGridViewR2->TabIndex = 8;
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this->dataGridViewTextBoxColumn1->HeaderText = L"Город";
+			this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
+			// 
+			// tabPage8
+			// 
+			this->tabPage8->Controls->Add(this->buttonSaveR3);
+			this->tabPage8->Controls->Add(this->buttonRCity);
+			this->tabPage8->Controls->Add(this->label24);
+			this->tabPage8->Controls->Add(this->comboBoxRCity);
+			this->tabPage8->Controls->Add(this->dataGridViewR3);
+			this->tabPage8->Location = System::Drawing::Point(4, 22);
+			this->tabPage8->Name = L"tabPage8";
+			this->tabPage8->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage8->Size = System::Drawing::Size(874, 439);
+			this->tabPage8->TabIndex = 2;
+			this->tabPage8->Text = L"Перечень путевок в определенную страну и город";
+			this->tabPage8->UseVisualStyleBackColor = true;
+			// 
+			// buttonRCity
+			// 
+			this->buttonRCity->Location = System::Drawing::Point(9, 381);
+			this->buttonRCity->Name = L"buttonRCity";
+			this->buttonRCity->Size = System::Drawing::Size(222, 23);
+			this->buttonRCity->TabIndex = 13;
+			this->buttonRCity->Text = L"Найти";
+			this->buttonRCity->UseVisualStyleBackColor = true;
+			this->buttonRCity->Click += gcnew System::EventHandler(this, &TourApp::buttonRCity_Click);
+			// 
+			// label24
+			// 
+			this->label24->AutoSize = true;
+			this->label24->Location = System::Drawing::Point(6, 6);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(37, 13);
+			this->label24->TabIndex = 12;
+			this->label24->Text = L"Город";
+			// 
+			// comboBoxRCity
+			// 
+			this->comboBoxRCity->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBoxRCity->FormattingEnabled = true;
+			this->comboBoxRCity->Location = System::Drawing::Point(9, 22);
+			this->comboBoxRCity->Name = L"comboBoxRCity";
+			this->comboBoxRCity->Size = System::Drawing::Size(222, 21);
+			this->comboBoxRCity->TabIndex = 11;
+			// 
+			// dataGridViewR3
+			// 
+			this->dataGridViewR3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridViewR3->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
+				this->dataGridViewTextBoxColumn2,
+					this->dataGridViewTextBoxColumn3, this->dataGridViewTextBoxColumn4, this->dataGridViewTextBoxColumn5, this->dataGridViewTextBoxColumn6,
+					this->dataGridViewTextBoxColumn7, this->Column8
+			});
+			this->dataGridViewR3->Location = System::Drawing::Point(234, 6);
+			this->dataGridViewR3->Name = L"dataGridViewR3";
+			this->dataGridViewR3->Size = System::Drawing::Size(634, 427);
+			this->dataGridViewR3->TabIndex = 8;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this->dataGridViewTextBoxColumn2->HeaderText = L"Номер";
+			this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this->dataGridViewTextBoxColumn3->HeaderText = L"Дата отправления";
+			this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
+			// 
+			// dataGridViewTextBoxColumn4
+			// 
+			this->dataGridViewTextBoxColumn4->HeaderText = L"Дата возврата";
+			this->dataGridViewTextBoxColumn4->Name = L"dataGridViewTextBoxColumn4";
+			// 
+			// dataGridViewTextBoxColumn5
+			// 
+			this->dataGridViewTextBoxColumn5->HeaderText = L"Страна, город";
+			this->dataGridViewTextBoxColumn5->Name = L"dataGridViewTextBoxColumn5";
+			// 
+			// dataGridViewTextBoxColumn6
+			// 
+			this->dataGridViewTextBoxColumn6->HeaderText = L"Дополнительно";
+			this->dataGridViewTextBoxColumn6->Name = L"dataGridViewTextBoxColumn6";
+			// 
+			// dataGridViewTextBoxColumn7
+			// 
+			this->dataGridViewTextBoxColumn7->HeaderText = L"Цена";
+			this->dataGridViewTextBoxColumn7->Name = L"dataGridViewTextBoxColumn7";
+			// 
+			// Column8
+			// 
+			this->Column8->HeaderText = L"Кол-во";
+			this->Column8->Name = L"Column8";
+			// 
+			// buttonSaveR3
+			// 
+			this->buttonSaveR3->Location = System::Drawing::Point(9, 410);
+			this->buttonSaveR3->Name = L"buttonSaveR3";
+			this->buttonSaveR3->Size = System::Drawing::Size(222, 23);
+			this->buttonSaveR3->TabIndex = 14;
+			this->buttonSaveR3->Text = L"Сохранить в файл";
+			this->buttonSaveR3->UseVisualStyleBackColor = true;
+			this->buttonSaveR3->Click += gcnew System::EventHandler(this, &TourApp::buttonSaveR3_Click);
+			// 
+			// buttonSaveR2
+			// 
+			this->buttonSaveR2->Location = System::Drawing::Point(6, 410);
+			this->buttonSaveR2->Name = L"buttonSaveR2";
+			this->buttonSaveR2->Size = System::Drawing::Size(222, 23);
+			this->buttonSaveR2->TabIndex = 15;
+			this->buttonSaveR2->Text = L"Сохранить в файл";
+			this->buttonSaveR2->UseVisualStyleBackColor = true;
+			this->buttonSaveR2->Click += gcnew System::EventHandler(this, &TourApp::buttonSaveR2_Click);
+			// 
+			// buttonSaveR1
+			// 
+			this->buttonSaveR1->Location = System::Drawing::Point(6, 410);
+			this->buttonSaveR1->Name = L"buttonSaveR1";
+			this->buttonSaveR1->Size = System::Drawing::Size(222, 23);
+			this->buttonSaveR1->TabIndex = 15;
+			this->buttonSaveR1->Text = L"Сохранить в файл";
+			this->buttonSaveR1->UseVisualStyleBackColor = true;
+			this->buttonSaveR1->Click += gcnew System::EventHandler(this, &TourApp::buttonSaveR1_Click);
 			// 
 			// TourApp
 			// 
@@ -568,20 +1044,32 @@ namespace tour {
 			this->tabPage1->PerformLayout();
 			this->tabPage2->ResumeLayout(false);
 			this->tabPage2->PerformLayout();
+			this->tabPage5->ResumeLayout(false);
+			this->tabPage5->PerformLayout();
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
+			this->tabPage3->ResumeLayout(false);
+			this->tabControl2->ResumeLayout(false);
+			this->tabPage6->ResumeLayout(false);
+			this->tabPage6->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewR1))->EndInit();
+			this->tabPage7->ResumeLayout(false);
+			this->tabPage7->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewR2))->EndInit();
+			this->tabPage8->ResumeLayout(false);
+			this->tabPage8->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewR3))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-
-		Employee * currentEmployee;
 		
 		void regEmployee() {
-			currentEmployee = new Employee();
+			Employee * currentEmployee = new Employee();
 			currentEmployee->name = msclr::interop::marshal_as<std::string>(textBoxEName->Text);
 			currentEmployee->surname = msclr::interop::marshal_as<std::string>(textBoxESurname->Text);
 			currentEmployee->pat = msclr::interop::marshal_as<std::string>(textBoxEPat->Text);
+			employees.push_back(currentEmployee);
 		}
 
 		void regTour() {
@@ -610,6 +1098,125 @@ namespace tour {
 			clients.push_back(client);
 		}
 
+		void addDeal() {
+			Deal * deal = new Deal();
+			uint16_t temp = stoi(tickets[comboBox3->SelectedIndex]->amount);
+			if (temp > 0) {
+				deal->employee = employees[comboBox1->SelectedIndex];
+				deal->client = clients[comboBox2->SelectedIndex];
+				deal->ticket = tickets[comboBox3->SelectedIndex];
+				deal->sellDate = msclr::interop::marshal_as<std::string>(dateTimePickerSell->Value.ToString());
+				temp--;
+				tickets[comboBox3->SelectedIndex]->amount = to_string(temp);
+				deals.push_back(deal);
+			}
+			else {
+				MessageBox::Show("Путевки закончились!", "Ойой!");
+			}
+			clearCombo();
+			updateCombo();
+		}
+
+		void clearCombo() {
+			comboBox1->Items->Clear();
+			comboBox2->Items->Clear();
+			comboBox3->Items->Clear();
+			comboBoxClient->Items->Clear();
+			comboBoxREmp->Items->Clear();
+			comboBoxRCity->Items->Clear();
+		}
+
+		void clearGrid() {
+			dataGridViewR1->Rows->Clear();
+			dataGridViewR2->Rows->Clear();
+			dataGridViewR3->Rows->Clear();
+		}
+
+		void updateCombo() {
+			for (uint16_t i = 0; i < employees.size(); i++) {
+				String^ string = 
+					gcnew String(employees[i]->surname.c_str()) + " " +
+					gcnew String(employees[i]->name.c_str()) + " " +
+					gcnew String(employees[i]->pat.c_str());
+				comboBox1->Items->Add(string);
+				comboBoxREmp->Items->Add(string);
+			}
+			for (uint16_t i = 0; i < clients.size(); i++) {
+				String^ string = (
+					gcnew String(clients[i]->surname.c_str()) + " " +
+					gcnew String(clients[i]->name.c_str()) + " " +
+					gcnew String(clients[i]->pat.c_str()));
+				comboBox2->Items->Add(string);
+				comboBoxClient->Items->Add(string);
+			}
+			for (uint16_t i = 0; i < tickets.size(); i++) {
+				comboBox3->Items->Add(
+					"Путевка в " + gcnew String(tickets[i]->country.c_str()) + ", " +
+					gcnew String(tickets[i]->city.c_str()) + ". Осталось: " +
+					gcnew String(tickets[i]->amount.c_str())
+				);
+			}
+			std::vector<string> * ex = new vector<string>;
+			for (uint16_t i = 0; i < tickets.size(); i++) {
+				if (!vContains(ex, tickets[i]->city)) {
+					comboBoxRCity->Items->Add(gcnew String(tickets[i]->city.c_str()));
+					ex->push_back(tickets[i]->city);
+				}
+			}
+			free(ex);
+		}
+
+		bool vContains(std::vector<std::string> * v, std::string x) {
+			if (std::find(v->begin(), v->end(), x) != v->end()) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+
+		void findClientDeals() {
+			for (uint16_t i = 0; i < deals.size(); i++) {
+				if (deals[i]->client == clients[comboBoxClient->SelectedIndex]) {
+					dataGridViewR1->Rows->Add(
+						gcnew String(to_string(deals[i]->ticket->num).c_str()),
+						gcnew String(deals[i]->ticket->sendDate.c_str()),
+						gcnew String(deals[i]->ticket->retDate.c_str()),
+						gcnew String((deals[i]->ticket->country + ", " + deals[i]->ticket->city).c_str()),
+						gcnew String(deals[i]->ticket->extraStuff.c_str()),
+						gcnew String(deals[i]->ticket->price.c_str()),
+						gcnew String(deals[i]->sellDate.c_str())
+					);
+				}
+			}
+		}
+
+		void findEmpDeals() {
+			for (uint16_t i = 0; i < deals.size(); i++) {
+				if (deals[i]->employee == employees[comboBoxREmp->SelectedIndex]) {
+					dataGridViewR2->Rows->Add(
+						gcnew String(deals[i]->ticket->city.c_str())
+					);
+				}
+			}
+		}
+
+		void findCityTickets() {
+			for (uint16_t i = 0; i < tickets.size(); i++) {
+				if(gcnew String(tickets[i]->city.c_str()) == comboBoxRCity->Text) {
+					dataGridViewR3->Rows->Add(
+						gcnew String(to_string(tickets[i]->num).c_str()),
+						gcnew String(tickets[i]->sendDate.c_str()),
+						gcnew String(tickets[i]->retDate.c_str()),
+						gcnew String((tickets[i]->country + ", " + tickets[i]->city).c_str()),
+						gcnew String(tickets[i]->extraStuff.c_str()),
+						gcnew String(tickets[i]->price.c_str()),
+						gcnew String(tickets[i]->amount.c_str())
+					);
+				}
+			}
+		}
+
 	private: 
 		System::Void buttonEmpConfirm_Click(System::Object^ sender, System::EventArgs^ e) {
 			regEmployee();
@@ -621,6 +1228,75 @@ namespace tour {
 
         System::Void buttonClientAdd_Click(System::Object^ sender, System::EventArgs^ e) {
 			addClient();
+        }
+
+        System::Void buttonSell_Click(System::Object^ sender, System::EventArgs^ e) {
+			addDeal();
+        }
+
+        System::Void tabControl1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+			clearCombo();
+			updateCombo();
+        }
+
+        System::Void buttonRClient_Click(System::Object^ sender, System::EventArgs^ e) {
+			clearGrid();
+			findClientDeals();
+		}
+
+		System::Void buttonREmp_Click(System::Object^ sender, System::EventArgs^ e) {
+			clearGrid();
+			findEmpDeals();
+        }
+
+		System::Void buttonRCity_Click(System::Object^ sender, System::EventArgs^ e) {
+			clearGrid();
+			findCityTickets();
+		}
+
+        System::Void buttonSaveR1_Click(System::Object^ sender, System::EventArgs^ e) {
+			String^ fileName = "Путевки клиента " + comboBoxClient->Text + ".txt";
+			StreamWriter^ sw = gcnew StreamWriter(fileName);
+			for (uint16_t i = 0; i < dataGridViewR1->Rows->Count; i++) {
+				sw->WriteLineAsync(
+					dataGridViewR1->Rows[i]->Cells[0]->Value + " " +
+					dataGridViewR1->Rows[i]->Cells[1]->Value + " " +
+					dataGridViewR1->Rows[i]->Cells[2]->Value + " " +
+					dataGridViewR1->Rows[i]->Cells[3]->Value + " " +
+					dataGridViewR1->Rows[i]->Cells[4]->Value + " " +
+					dataGridViewR1->Rows[i]->Cells[5]->Value + " " +
+					dataGridViewR1->Rows[i]->Cells[6]->Value
+				);
+			}
+			sw->Close();
+        }
+
+        System::Void buttonSaveR2_Click(System::Object^ sender, System::EventArgs^ e) {
+			String^ fileName = "Города сотрудника " + comboBoxREmp->Text + ".txt";
+			StreamWriter^ sw = gcnew StreamWriter(fileName);
+			for (uint16_t i = 0; i < dataGridViewR2->Rows->Count; i++) {
+				sw->WriteLineAsync(
+					dataGridViewR2->Rows[i]->Cells[0]->Value + " "
+				);
+			}
+			sw->Close();
+        }
+
+        System::Void buttonSaveR3_Click(System::Object^ sender, System::EventArgs^ e) {
+			String^ fileName = "Перечень путевок в " + comboBoxRCity->Text + ".txt";
+			StreamWriter^ sw = gcnew StreamWriter(fileName);
+			for (uint16_t i = 0; i < dataGridViewR3->Rows->Count; i++) {
+				sw->WriteLineAsync(
+					dataGridViewR3->Rows[i]->Cells[0]->Value + " " +
+					dataGridViewR3->Rows[i]->Cells[1]->Value + " " +
+					dataGridViewR3->Rows[i]->Cells[2]->Value + " " +
+					dataGridViewR3->Rows[i]->Cells[3]->Value + " " +
+					dataGridViewR3->Rows[i]->Cells[4]->Value + " " +
+					dataGridViewR3->Rows[i]->Cells[5]->Value + " " +
+					dataGridViewR3->Rows[i]->Cells[6]->Value
+				);
+			}
+			sw->Close();
         }
 };
 }
